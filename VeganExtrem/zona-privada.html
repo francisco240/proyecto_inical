@@ -1,0 +1,171 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Completado - VeganExtrem</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Gracias por Registrarte</h1>
+  </header>
+ <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      
+      
+     
+
+  
+  <!-- Icono de usuario -->
+  <div class="usuario-icono">
+    <button onclick="document.getElementById('zona-privada').style.visibility = 'visible'">👤 Zona Privada</button>
+  </div>
+
+  <!-- Zona privada -->
+  <div id="zona-privada" class="zona-privada">
+    <h2>Bienvenido a tu Zona Privada</h2>
+    <div class="opciones">
+      <button onclick="document.getElementById('perfil').style.visibility = 'visible'; document.getElementById('tarjetas').style.visibility = 'hidden'">Perfil</button>
+      <button onclick="document.getElementById('tarjetas').style.visibility = 'visible'; document.getElementById('perfil').style.visibility = 'hidden'">Tarjetas</button>
+    </div>
+
+    <!-- Perfil -->
+    <div id="perfil" class="perfil">
+      <h3>Mi Perfil</h3>
+      <p><strong>Nombre:</strong> Juan Pérez</p>
+      <p><strong>Email:</strong> juan.perez@example.com</p>
+      <p><strong>Teléfono:</strong> +34 600 123 456</p>
+      <p><strong>Dirección:</strong> Calle Falsa, 123, Madrid, España</p>
+    </div>
+
+    <!-- Tarjetas -->
+    <div id="tarjetas" class="tarjetas">
+      <h3>Mis Tarjetas</h3>
+      <div class="tarjeta">
+        <p><strong>Tarjeta 1</strong></p>
+        <p>**** **** **** 1234</p>
+        <p><strong>Tipo:</strong> Visa</p>
+        <button>Eliminar</button>
+      </div>
+      <div class="tarjeta">
+        <p><strong>Tarjeta 2</strong></p>
+        <p>**** **** **** 5678</p>
+        <p><strong>Tipo:</strong> MasterCard</p>
+        <button>Eliminar</button>
+      </div>
+    </div>
+
+    <!-- Botón para cerrar la zona privada -->
+    <div class="acciones">
+      <button onclick="document.getElementById('zona-privada').style.visibility = 'hidden'">Cerrar</button>
+    </div>
+  </div>
+</body>
+</html>
+
+
+<!-- Footer -->
+<footer class="pie-de-pagina">
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Suscríbete a nuestro VeganExtrem</h2>
+    <p>Recibe notificaciones, novedades y ofertas especiales directamente en tu correo electrónico.</p>
+    <form action="#" method="post">
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="Introduce tu correo..." required>
+      <button type="submit">Suscribirse</button>
+    </form>
+  </section>
+
+  <!-- Información General -->
+  <section class="informacion-general">
+    <h3>Información General</h3>
+    <p>&copy; 2024 VeganExtrem. Todos los derechos reservados.</p>
+    <p><a href="aviso-legal.html">Aviso Legal</a></p>
+    <p>Tarjetas aceptadas: 
+      <img src="img/tarjeta.png" alt="metodos de pagar" class="icono-tarjeta">
+      
+     </p>
+  </section>
+
+  <!-- Contacto y Redes Sociales -->
+  <section class="contacto-redes">
+    <h3>Contacto y Redes Sociales</h3>
+    <p><strong>Teléfono:</strong> +34 900 123 456</p>
+    <p><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+    <div class="redes-sociales">
+      <a href="https://facebook.com" target="_blank">
+        <img src="img/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="img/instagram.jpg" alt="Instagram">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="img/twitter.png" alt="Twitter">
+      </a>
+    </div>
+    <div class="descarga-apps">
+      <p>Descarga nuestra App:</p>
+      <a href="https://play.google.com" target="_blank">
+        <img src="img/google-play.png" alt="Google Play">
+      </a>
+      <a href="https://apps.apple.com" target="_blank">
+        <img src="img/app-store.png" alt="App Store">
+      </a>
+    </div>
+  </section>
+
+  <!-- Categorías y Subcategorías -->
+  <section class="categorias">
+    <h3>Categorías y Subcategorías</h3>
+    <ul>
+      <li>Vinos
+        <ul>
+          <li>Vinos blancos</li>
+          <li>Vinos rosados</li>
+          <li>Vinos tintos</li>
+          <li>Vinos espumosos</li>
+        </ul>
+      </li>
+      <li>Cervezas
+        <ul>
+          <li>Artesanales</li>
+          <li>Importadas</li>
+          <li>Sin alcohol</li>
+        </ul>
+      </li>
+      <li>Licores
+        <ul>
+          <li>Whisky</li>
+          <li>Vodka</li>
+          <li>Ron</li>
+          <li>Tequila</li>
+        </ul>
+      </li>
+      <li>Aperitivos
+        <ul>
+          <li>Snacks</li>
+          <li>Chocolates</li>
+          <li>Frutos secos</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Información de Contacto -->
+  <section class="contact-info">
+    <h2>Información de Contacto</h2>
+    <p><strong>Dirección:</strong> Calle de los Veganos, 123, 28001 Madrid, España</p>
+    <p><strong>Teléfono:</strong> +34 600 123 456</p>
+    <p><strong>Email:</strong> contacto@veganextrem.com</p>
+  </section>
+</footer>
+  
+    <p>&copy; 2024 VeganExtrem. Todos los derechos reservados.</p>
+  </footer>
+
+  
+</body>
+</html>

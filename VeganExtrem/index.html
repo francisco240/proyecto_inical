@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VeganExtrem - Tienda Vegana de Extremadura</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.jpeg" alt="VeganExtrem Logo" />
+      <h1>VeganExtrem: Tienda Vegana de Extremadura</h1>
+    </div>
+
+
+    <div class="user-cart-container">
+      
+<!-- Botones de acceso -->
+<a href="login.html" class="user-btn">👤 Mi Cuenta</a>
+
+     
+  
+    
+    
+  
+
+      <!-- Menú desplegable de idioma -->
+      <div class="idioma-container">
+        <label for="idioma"></label>
+        <select id="idioma" name="idioma">
+          <option value="es">Español</option>
+          <option value="en">Inglés</option>
+          <option value="fr">Francés</option>
+          <option value="pt">Portugués</option>
+        </select>
+        <button onclick="cambiarIdioma()"></button>
+      </div>
+
+      <!-- Menú desplegable de moneda -->
+      <div class="moneda-container">
+        <label for="moneda"></label>
+        <select id="moneda" name="moneda">
+          <option value="eur">Euros (€)</option>
+          <option value="gbp">Libras (£)</option>
+          <option value="usd">Dólares ($)</option>
+        </select>
+        <button onclick="cambiarMoneda()"></button>
+     
+    <div class="search-container">
+      <input type="text" placeholder="Buscar productos...">
+      <button>🔍</button>
+    </div>
+    
+
+    
+  </header>
+
+ 
+
+    
+</body>
+
+  </header>
+
+  <!-- Navegación con Menú Principal -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="envio.html">envio</a></li>
+      <li><a href="contacto.html">contacto</a></li>
+      <li><a href="BLOG.html"></a>BLOG</li>
+      <li><a href="zona-privada.html">Zona Privada</a></li>
+      
+    </ul>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      
+      
+    </ul>
+  </nav>
+
+
+  <!-- Marquesina animada -->
+  <div class="marquee">
+    <div class="marquee-content">
+      Envíos gratuitos a partir de 100€ | ¡Atención al cliente 24/7!
+    </div>
+  </div>
+<section class="pagina-categorias">
+  <!-- Botón para mostrar/ocultar filtro -->
+  <label for="toggle-filtro" class="btn-toggle">Mostrar Filtros</label>
+  <input type="checkbox" id="toggle-filtro" class="toggle-checkbox">
+
+  <!-- Filtro de Búsqueda -->
+  <aside class="filtro">
+    <h2>Filtrar Productos</h2>
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Precio</legend>
+        <label>
+          <input type="radio" name="precio" value="0-20"> 0€ - 20€
+        </label><br>
+        <label>
+          <input type="radio" name="precio" value="20-50"> 20€ - 50€
+        </label><br>
+        <label>
+          <input type="radio" name="precio" value="50-100"> 50€ - 100€
+        </label><br>
+        <label>
+          <input type="radio" name="precio" value="100+"> Más de 100€
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Valoraciones</legend>
+        <label>
+          <input type="checkbox" name="valoracion" value="5"> ★★★★★
+        </label><br>
+        <label>
+          <input type="checkbox" name="valoracion" value="4"> ★★★★☆
+        </label><br>
+        <label>
+          <input type="checkbox" name="valoracion" value="3"> ★★★☆☆
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Marca</legend>
+        <label>
+          <input type="checkbox" name="marca" value="marca1"> Beyond Meat
+        </label><br>
+        <label>
+          <input type="checkbox" name="marca" value="marca2"> Heura
+        </label><br>
+        <label>
+          <input type="checkbox" name="marca" value="marca3"> Fry´s
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Origen</legend>
+        <label>
+          <select name="origen">
+            <option value="">Seleccionar provincia</option>
+            <option value="Madrid">Madrid</option>
+            <option value="Barcelona">Barcelona</option>
+            <option value="Valencia">Valencia</option>
+            <option value="Sevilla">Sevilla</option>
+          </select>
+        </label>
+      </fieldset>
+
+      <button type="submit">Aplicar Filtros</button>
+    </form>
+  </aside>
+
+  <!-- Productos Relacionados -->
+  <section class="productos-relacionados">
+    <h2>Productos de la Categoría</h2>
+    <div class="producto">
+      <img src="img/7.jpeg" alt="Producto 1">
+      <p>Cebollas - 12€</p>
+    </div>
+    <div class="producto">
+      <img src="img/12.jpeg" alt="Producto 2">
+      <p>tofu- 18€</p>
+    </div>
+    <div class="producto">
+      <img src="img/9.jpeg" alt="Producto 3">
+      <p>Brocoli - 28€</p>
+    </div>
+    <div class="producto">
+      <img src="img/10.jpg" alt="Producto 4">
+      <p>Pepino  - 20€</p>
+    </div>
+  </section>
+</section>
+<!-- Sección de Productos -->
+<section class="productos">
+  <h2>Productos Destacados</h2>
+
+  <!-- Categoría de Productos Más Vendidos -->
+  <div class="categoria" id="mas-vendidos">
+    <h3>Productos Más Vendidos</h3>
+    <div class="productos-lista">
+      <div class="producto">
+        <img src="img/1.jpeg" alt="Producto 1">
+        <p>Tomates - 20€</p>
+        <button onclick="window.location.href='detalles-producto1.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/2.jpeg" alt="Producto 2">
+        <p>Patatas - 15€</p>
+        <button onclick="window.location.href='detalles-producto2.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/3.jpeg" alt="Producto 3">
+        <p>Naranja Pera - 10€</p>
+        <button onclick="window.location.href='detalles-producto3.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/4.png" alt="Producto 4">
+        <p>Uvas 4 - 25€</p>
+        <button onclick="window.location.href='detalles-producto4.html'">Ver Detalles</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categoría de Productos Novedosos -->
+  <div class="categoria" id="novedosos">
+    <h3>Productos Novedosos</h3>
+    <div class="productos-lista">
+      <div class="producto">
+        <img src="img/5.jpeg" alt="Producto Novedoso 1">
+        <p>Zanahorias - 22€</p>
+        <button onclick="window.location.href='detalles-producto.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/6.jpeg" alt="Producto Novedoso 2">
+        <p>Naranjas - 18€</p>
+        <button onclick="window.location.href='detalles-producto.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/7.jpeg" alt="Producto Novedoso 3">
+        <p>Cebollas - 12€</p>
+        <button onclick="window.location.href='detalles-producto.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/8.png" alt="Producto Novedoso 4">
+        <p>Repollo          - 30€</p>
+        <button onclick="window.location.href='detalles-producto.html'">Ver Detalles</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Categoría de Productos Recomendados -->
+  <div class="categoria" id="recomendados">
+    <h3>Productos Recomendados</h3>
+    <div class="productos-lista">
+      <div class="producto">
+        <img src="img/9.jpeg" alt="Producto Recomendado 1">
+        <p>Brocoli - 28€</p>
+        <button onclick="window.location.href='detalles-producto.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/10.jpg" alt="Producto Recomendado 2">
+        <p>Pepino japones - 20€</p>
+        <button onclick="window.location.href='detalles-producto.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/11.jpeg" alt="Producto Recomendado 3">
+        <p>Escarola - 15€</p>
+        <button onclick="window.location.href='detalles-producto.html'">Ver Detalles</button>
+      </div>
+      <div class="producto">
+        <img src="img/12.jpeg" alt="Producto Recomendado 4">
+        <p>Tofu - 18€</p>
+        <button onclick="window.location.href='detalles-producto.html'">Ver Detalles</button>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Menú de Categorías -->
+  <nav class="menu-categorias">
+    <ul>
+      <li><a href="#categoria-frutas">Frutas y Verduras</a></li>
+      <li><a href="#categoria-lacteos">Lácteos Veganos</a></li>
+      <li><a href="#categoria-cereales">Cereales</a></li>
+      <li><a href="#categoria-snacks">Snacks</a></li>
+      <li><a href="#categoria-bebidas">Bebidas</a></li>
+      <li><a href="#categoria-limpieza">Productos de Limpieza</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido de Categorías -->
+  <section class="seccion-categorias">
+    <div id="categoria-frutas">
+      <h3>Frutas y Verduras</h3>
+      <ul>
+        <li>Manzanas - 1.5€</li>
+        <li>Plátanos - 1.2€</li>
+        <li>Zanahorias - 0.9€</li>
+      </ul>
+    </div>
+
+    <div id="categoria-lacteos">
+      <h3>Lácteos Veganos</h3>
+      <ul>
+        <li>Leche de almendras - 2.5€</li>
+        <li>Queso vegano - 3.0€</li>
+        <li>Yogur de coco - 1.8€</li>
+      </ul>
+    </div>
+
+    <div id="categoria-cereales">
+      <h3>Cereales</h3>
+      <ul>
+        <li>Avena - 2.0€</li>
+        <li>Arroz integral - 1.5€</li>
+        <li>Trigo sarraceno - 2.3€</li>
+      </ul>
+    </div>
+
+    <div id="categoria-snacks">
+      <h3>Snacks</h3>
+      <ul>
+        <li>Barra de semillas - 1.5€</li>
+        <li>Frutos secos - 2.0€</li>
+        <li>Pipoca vegana - 1.8€</li>
+      </ul>
+    </div>
+
+    <div >
+      
+    </div>
+    <div id="categoria-bebidas">
+      <h3>Bebidas</h3>
+      <ul>
+        <li>Batido de frutos rojos - 2.5€</li>
+        <li>Té verde orgánico - 1.5€</li>
+        <li>Café vegano - 1.8€</li>
+      </ul>
+      <img src="" alt=" class="icono-envio">
+      
+      </div>
+    
+    <div id="categoria-sustitutos">
+      <h3>Productos de que sustituyen la carne</h3>
+      <ul>
+        <li>tofu - 2.0€</li>
+        <li>Crema de almendas - 3.5€</li>
+        <li>mantequillas de anacardos - 1.5€</li>
+      </ul>
+      <img src="img/caja.png" alt="Envíos en 24 horas" class="icono-envio">
+      
+      </div>
+    <div id="categoria-bolleria">
+      <h3>Productos de dulces y postres</h3>
+      <ul>
+        <li>Croissant - 2.0€</li>
+        <li>Caracola - 3.5€</li>
+        <li>Napolitana - 1.5€</li>
+      </ul>
+    </div>
+
+    <div id="categoria-deportiva">
+      <h3>Productos de deporte</h3>
+      <ul>
+        <li> creatine 2.0€</li> 
+        <li>Glutamina - 3.5€</li>
+        <li>Energy gel - 1.5€</li>
+      </ul>
+    </div>
+
+    <div id="categoria-sin gluten">
+      <h3>Productos de Limpieza</h3>
+      <ul>
+        <li>Roscon - 2.0€</li>
+        <li>Holgaza de mijo - 3.5€</li>
+        <li>bombas de chocolate blanco - 1.5€</li>
+      </ul>
+    </div>
+
+    <div id="categoria-limpieza">
+      <h3>Productos de Limpieza</h3>
+      <ul>
+        <li>Jabón natural - 2.0€</li>
+        <li>Detergente ecológico - 3.5€</li>
+        <li>Esponjas biodegradables - 1.5€</li>
+      </ul>
+    </div>
+  </section>
+<!-- Sección Diferenciadores Competitivos -->
+<section class="diferenciadores">
+  <h2>¿Por qué elegirnos?</h2>
+  <div class="diferenciador">
+    <img src="img/24h.png" alt="Envíos en 24 horas" class="icono-diferenciador">
+    <div class="descripcion">
+      <h3>Envíos en 24 horas</h3>
+      <p>envios en un plazo máximo de 24 horas.</p>
+    </div>
+  </div>
+  <div class="diferenciador">
+    <img src="img/24-7.png" alt="Atención al cliente 24/7" class="icono-diferenciador">
+    <div class="descripcion">
+      <h3>Atención al cliente 24/7</h3>
+      <p>Estamos disponibles en todo momento para ayudarte con cualquier consulta.</p>
+    </div>
+  </div>
+  <div class="diferenciador">
+    <img src="img/100.png" alt="Productos de calidad" class="icono-diferenciador">
+    <div class="descripcion">
+      <h3>Productos 100% Veganos</h3>
+      <p>Garantizamos que todos nuestros productos son 100% veganos y de alta calidad.</p>
+    </div>
+  </div>
+</section>
+
+  <div>
+ <!-- Sección de Comentarios -->
+<section class="comentarios">
+  <h2>Reseñas de Nuestros Clientes</h2>
+  <div class="comentario">
+    <h3>María López</h3>
+    <p>"¡Excelente servicio! Los productos llegaron rápido y en perfecto estado."</p>
+    <p class="calificacion">Calificación: ★★★★★</p>
+  </div>
+  <div class="comentario">
+    <h3>Juan Pérez</h3>
+    <p>"Gran calidad en los productos, se nota que son 100% veganos. ¡Volveré a comprar!"</p>
+    <p class="calificacion">Calificación: ★★★★☆</p>
+  </div>
+  <div class="comentario">
+    <h3>Ana García</h3>
+    <p>"Me encantó la atención al cliente, resolvieron mis dudas muy rápido."</p>
+    <p class="calificacion">Calificación: ★★★★★</p>
+  </div>
+  <div class="comentario">
+    <h3>Carlos Rodríguez</h3>
+    <p>"El envío demoró un poco más de lo esperado, pero los productos son excelentes."</p>
+    <p class="calificacion">Calificación: ★★★★☆</p>
+  </div>
+  <div class="comentario">
+    <h3>Lucía Fernández</h3>
+    <p>"Muy contenta con la compra, los precios son accesibles y la calidad es insuperable."</p>
+    <p class="calificacion">Calificación: ★★★★★</p>
+  </div>
+</section>
+ <!-- Footer -->
+<footer class="pie-de-pagina">
+  <!-- Newsletter -->
+  <section class="newsletter">
+    <h2>Suscríbete a nuestro VeganExtrem</h2>
+    <p>Recibe notificaciones, novedades y ofertas especiales directamente en tu correo electrónico.</p>
+    <form action="#" method="post">
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="Introduce tu correo..." required>
+      <button type="submit">Suscribirse</button>
+    </form>
+  </section>
+
+  <!-- Información General -->
+  <section class="informacion-general">
+    <h3>Información General</h3>
+    <p>&copy; 2024 VeganExtrem. Todos los derechos reservados.</p>
+    <p><a href="aviso-legal.html">Aviso Legal</a></p>
+    <p>Tarjetas aceptadas: 
+      <img src="img/tarjeta.png" alt="metodos de pagar" class="icono-tarjeta">
+      
+     </p>
+  </section>
+
+  <!-- Contacto y Redes Sociales -->
+  <section class="contacto-redes">
+    <h3>Contacto y Redes Sociales</h3>
+    <p><strong>Teléfono:</strong> +34 900 123 456</p>
+    <p><strong>Horario de atención:</strong> Lunes a Viernes, 9:00 - 18:00</p>
+    <div class="redes-sociales">
+      <a href="https://facebook.com" target="_blank">
+        <img src="img/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://instagram.com" target="_blank">
+        <img src="img/instagram.jpg" alt="Instagram">
+      </a>
+      <a href="https://twitter.com" target="_blank">
+        <img src="img/twitter.png" alt="Twitter">
+      </a>
+    </div>
+    <div class="descarga-apps">
+      <p>Descarga nuestra App:</p>
+      <a href="https://play.google.com" target="_blank">
+        <img src="img/google-play.png" alt="Google Play">
+      </a>
+      <a href="https://apps.apple.com" target="_blank">
+        <img src="img/app-store.png" alt="App Store">
+      </a>
+    </div>
+  </section>
+
+  <!-- Categorías y Subcategorías -->
+  <section class="categorias">
+    <h3>Categorías y Subcategorías</h3>
+    <ul>
+      <li>Vinos
+        <ul>
+          <li>Vinos blancos</li>
+          <li>Vinos rosados</li>
+          <li>Vinos tintos</li>
+          <li>Vinos espumosos</li>
+        </ul>
+      </li>
+      <li>Cervezas
+        <ul>
+          <li>Artesanales</li>
+          <li>Importadas</li>
+          <li>Sin alcohol</li>
+        </ul>
+      </li>
+      <li>Licores
+        <ul>
+          <li>Whisky</li>
+          <li>Vodka</li>
+          <li>Ron</li>
+          <li>Tequila</li>
+        </ul>
+      </li>
+      <li>Aperitivos
+        <ul>
+          <li>Snacks</li>
+          <li>Chocolates</li>
+          <li>Frutos secos</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Información de Contacto -->
+  <section class="contact-info">
+    <h2>Información de Contacto</h2>
+    <p><strong>Dirección:</strong> Calle de los Veganos, 123, 28001 Madrid, España</p>
+    <p><strong>Teléfono:</strong> +34 600 123 456</p>
+    <p><strong>Email:</strong> contacto@veganextrem.com</p>
+  </section>
+</footer>
+  
+    <p>&copy; 2024 VeganExtrem. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
